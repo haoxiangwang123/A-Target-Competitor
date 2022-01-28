@@ -85,7 +85,6 @@ GO
 CREATE TABLE Customer.ShippingAddressList(
     CustomerID int NOT NULL,
     AddressID int NOT NULL,
-    Priority int NOT NULL,
     FOREIGN KEY (CustomerID) REFERENCES Customer.Customers(CustomerID),
     FOREIGN KEY (AddressID) REFERENCES Address.Addresses(AddressID)
 )
@@ -95,7 +94,6 @@ GO
 CREATE TABLE Customer.BillingAddressList(
     CustomerID int NOT NULL,
     AddressID int NOT NULL,
-    Priority int NOT NULL,
     FOREIGN KEY (CustomerID) REFERENCES Customer.Customers(CustomerID),
     FOREIGN KEY (AddressID) REFERENCES Address.Addresses(AddressID)
 )
